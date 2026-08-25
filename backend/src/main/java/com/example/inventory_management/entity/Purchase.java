@@ -1,28 +1,34 @@
 package com.example.inventory_management.entity;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "purchases")
+@Entity
+@Table(name = "purchases")
 public class Purchase {
 
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String purchaseNumber;
 
-    private String supplierId;
+    @ManyToOne
+    @JoinColumn(name = "supplier_id")
+    private Supplier supplier;
 
-    private String wareHouseId;
+    @ManyToOne
+    @JoinColumn(name = "wareHouse_id")
+    private WareHouse wareHouse;
 
     private LocalDateTime purchaseDate;
 

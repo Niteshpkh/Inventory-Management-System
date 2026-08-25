@@ -1,29 +1,35 @@
 package com.example.inventory_management.entity;
 
+import com.example.inventory_management.enums.TransactionType;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import javax.management.relation.TransactionType;
 
 import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "stock_transactions")
+@Entity
+@Table(name = "stock_transactions")
 public class StockTransaction {
 
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    private String productId;
+    @ManyToOne
+    @JoinColumn(name = "product_id", nullable = false)
+    private Product product;
 
-    private String WareHouseId;
+    @ManyToOne
+    @JoinColumn(name = "warehouse_id", nullable = false)
+    private WareHouse warehouse;
 
     private int quantity;
 
+    @Enumerated(EnumType.STRING)
     private TransactionType transactionType;
 
     private String referenceId;

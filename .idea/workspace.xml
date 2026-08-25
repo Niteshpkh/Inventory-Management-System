@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ae5b32f-35c8-49fb-8df8-fb51763bed8f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/Purchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/Purchase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/SaleItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/SaleItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/StockTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/StockTransaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/Supplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/WareHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/WareHouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/enum/Role.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/enum/TransactionType.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,14 +26,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="20" />
+    <option name="cachedIndexableFilesCount" value="28" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Kotlin Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -59,59 +67,59 @@
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000242572548095" />
-      <entry key="S5" value="1.036880703053848" />
-      <entry key="S10" value="1.5000673358782302" />
-      <entry key="S30" value="4.2497572831849695" />
-      <entry key="S60" value="6.555425286747166" />
-      <entry key="M2" value="8.89233775925705" />
-      <entry key="M5" value="12.918727114409648" />
-      <entry key="M10" value="19.036868353511032" />
-      <entry key="M15" value="25.79466452406631" />
-      <entry key="M30" value="42.17753297783933" />
-      <entry key="H1" value="58.80717209810143" />
-      <entry key="H2" value="71.00997265540425" />
-      <entry key="H4" value="78.45906920786459" />
-      <entry key="D1" value="85.49355375708357" />
-      <entry key="W1" value="86.7826612115791" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000090977414" />
+      <entry key="S10" value="1.0001052726981574" />
+      <entry key="S30" value="1.0967948350289378" />
+      <entry key="S60" value="1.8160518885423915" />
+      <entry key="M2" value="4.191894739803846" />
+      <entry key="M5" value="10.027423315941197" />
+      <entry key="M10" value="16.842905296235166" />
+      <entry key="M15" value="24.737219010403727" />
+      <entry key="M30" value="50.80385008879149" />
+      <entry key="H1" value="88.19912853528422" />
+      <entry key="H2" value="122.91815516121241" />
+      <entry key="H4" value="147.21113698656225" />
+      <entry key="D1" value="172.34011243768907" />
+      <entry key="W1" value="177.1773466943212" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="9.124492095930774E-87" />
-      <entry key="S2" value="3.0906667475858494E-22" />
-      <entry key="S5" value="2.4907106879998706E-9" />
-      <entry key="S10" value="5.148735087057084E-5" />
-      <entry key="S30" value="0.054609120823886796" />
-      <entry key="S60" value="0.38887055304398693" />
-      <entry key="M2" value="1.1493397031897514" />
-      <entry key="M5" value="2.4932742936451526" />
-      <entry key="M10" value="4.202801680646354" />
-      <entry key="M15" value="5.800720885986558" />
-      <entry key="M30" value="9.140889697416224" />
-      <entry key="H1" value="12.18827872264472" />
-      <entry key="H2" value="14.310715437611897" />
-      <entry key="H4" value="15.57437152319473" />
-      <entry key="D1" value="16.750151273261135" />
-      <entry key="W1" value="16.963993439244643" />
+      <entry key="MS100" value="7.974669663823307E-8" />
+      <entry key="MS500" value="0.038049302961803005" />
+      <entry key="S2" value="0.478364902147594" />
+      <entry key="S5" value="1.1202838776875306" />
+      <entry key="S10" value="1.7409418239515864" />
+      <entry key="S30" value="2.621487267333036" />
+      <entry key="S60" value="3.8232110402982844" />
+      <entry key="M2" value="6.669833243635968" />
+      <entry key="M5" value="13.336036569506556" />
+      <entry key="M10" value="20.071758228706585" />
+      <entry key="M15" value="24.681030442527994" />
+      <entry key="M30" value="33.643401637595794" />
+      <entry key="H1" value="42.80993855978882" />
+      <entry key="H2" value="50.1986185874044" />
+      <entry key="H4" value="55.06224222346675" />
+      <entry key="D1" value="59.92371693575714" />
+      <entry key="W1" value="60.84394318437728" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="7.841931521343596E-11" />
-      <entry key="MS500" value="0.009525430422471117" />
-      <entry key="S2" value="0.31242788151471484" />
-      <entry key="S5" value="0.6618038673529659" />
-      <entry key="S10" value="1.270554534583103" />
-      <entry key="S30" value="4.176926790460842" />
-      <entry key="S60" value="6.850365047767803" />
-      <entry key="M2" value="9.970492490227036" />
-      <entry key="M5" value="15.366048540422895" />
-      <entry key="M10" value="23.20586671648466" />
-      <entry key="M15" value="31.56611613688221" />
-      <entry key="M30" value="51.296448831030666" />
-      <entry key="H1" value="70.98096120218254" />
-      <entry key="H2" value="85.31219083345535" />
-      <entry key="H4" value="94.02881415033974" />
-      <entry key="D1" value="102.24287483013137" />
-      <entry key="W1" value="103.74653450847897" />
+      <entry key="MS100" value="1.8916439046787753E-5" />
+      <entry key="MS500" value="0.11736009976458825" />
+      <entry key="S2" value="0.853813363031027" />
+      <entry key="S5" value="1.721208978434709" />
+      <entry key="S10" value="2.4815239932208537" />
+      <entry key="S30" value="3.6043442709608664" />
+      <entry key="S60" value="5.561281386616828" />
+      <entry key="M2" value="10.796249713717385" />
+      <entry key="M5" value="23.31119612810472" />
+      <entry key="M10" value="36.87291075615534" />
+      <entry key="M15" value="49.381468629270906" />
+      <entry key="M30" value="84.41754608308261" />
+      <entry key="H1" value="130.98698128540283" />
+      <entry key="H2" value="173.1024682139369" />
+      <entry key="H4" value="202.2650937413817" />
+      <entry key="D1" value="232.26225373403923" />
+      <entry key="W1" value="238.02105943786398" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -123,31 +131,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/LOQ/Desktop/Inventory_Management/backend/src/main/java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.jshint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.jshint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/LOQ/Desktop/Inventory_Management/backend/src/main/java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.inventory_management.enum" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\LOQ\Desktop\Inventory_Management\backend" />
     </key>

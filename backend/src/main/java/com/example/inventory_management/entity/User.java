@@ -1,24 +1,23 @@
 package com.example.inventory_management.entity;
 
+import com.example.inventory_management.enums.Role;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.context.support.BeanDefinitionDsl;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-
 
 import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "users")
+@Entity
+@Table(name = "users")
 public class User {
 
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String username;
 
@@ -26,9 +25,8 @@ public class User {
 
     private String password;
 
-
-    private BeanDefinitionDsl.Role roleId;
-
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     private boolean isActive;
 

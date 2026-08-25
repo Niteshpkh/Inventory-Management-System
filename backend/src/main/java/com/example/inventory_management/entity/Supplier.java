@@ -1,19 +1,22 @@
 package com.example.inventory_management.entity;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "suppliers")
+@Entity
+@Table(name = "suppliers")
 public class Supplier {
 
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String name;
 
@@ -23,4 +26,6 @@ public class Supplier {
 
     private String address;
 
+    @OneToMany(mappedBy = "supplier")
+    private List<Purchase> purchases;
 }

@@ -1,21 +1,21 @@
 package com.example.inventory_management.entity;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "products")
+@Entity
+@Table(name = "products")
 public class Product {
 
     @Id
-    private String id;
+    private Long id;
 
     private String sku;
 
@@ -23,7 +23,9 @@ public class Product {
 
     private String description;
 
-    private String categoryId;
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
 
     private BigDecimal costPrice;
 
