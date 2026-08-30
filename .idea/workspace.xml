@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6ae5b32f-35c8-49fb-8df8-fb51763bed8f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/Security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/Security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/PurchaseItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/PurchaseItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/inventory_management/entity/Sale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,61 +57,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.5697604749612764" />
-      <entry key="MS500" value="3.211236270193522" />
-      <entry key="S2" value="5.007975915645717" />
-      <entry key="S5" value="6.7604754033334045" />
-      <entry key="S10" value="9.33920845073127" />
-      <entry key="S30" value="14.278847165371673" />
-      <entry key="S60" value="16.92080076075716" />
-      <entry key="M2" value="18.727320787148003" />
-      <entry key="M5" value="20.267324634603103" />
-      <entry key="M10" value="22.82691468091774" />
-      <entry key="M15" value="27.068371825734744" />
-      <entry key="M30" value="47.893241136143224" />
-      <entry key="H1" value="106.25689417178039" />
-      <entry key="H2" value="211.9070509640238" />
-      <entry key="H4" value="330.39791420820654" />
-      <entry key="D1" value="505.0117143427552" />
-      <entry key="W1" value="545.8095556440865" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000013343646" />
+      <entry key="S10" value="1.000036528955516" />
+      <entry key="S30" value="1.033500243176652" />
+      <entry key="S60" value="1.2447709738717292" />
+      <entry key="M2" value="2.5443695546170177" />
+      <entry key="M5" value="9.421039563079274" />
+      <entry key="M10" value="20.893888354424643" />
+      <entry key="M15" value="32.081318480352564" />
+      <entry key="M30" value="62.829358910525826" />
+      <entry key="H1" value="124.1089599451796" />
+      <entry key="H2" value="234.31134309504915" />
+      <entry key="H4" value="366.23323990731814" />
+      <entry key="D1" value="573.7488048458557" />
+      <entry key="W1" value="624.0678060817538" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="1.5886039018704752E-205" />
-      <entry key="S5" value="1.2033895891297844E-82" />
-      <entry key="S10" value="1.0969911527126292E-41" />
-      <entry key="S30" value="2.221950479375225E-14" />
-      <entry key="S60" value="1.4907604842110835E-7" />
-      <entry key="M2" value="3.961690658744841E-4" />
-      <entry key="M5" value="0.08010885893252777" />
-      <entry key="M10" value="0.9687025307770489" />
-      <entry key="M15" value="2.8892624237379056" />
-      <entry key="M30" value="12.774561163685332" />
-      <entry key="H1" value="39.99073230687977" />
-      <entry key="H2" value="85.23314645463668" />
-      <entry key="H4" value="131.90222474196446" />
-      <entry key="D1" value="196.04921675302137" />
-      <entry key="W1" value="210.4755705158471" />
+      <entry key="MS100" value="3.636078250270125E-245" />
+      <entry key="MS500" value="1.2945732956326442E-49" />
+      <entry key="S2" value="5.998348043042429E-13" />
+      <entry key="S5" value="1.2921091708233552E-5" />
+      <entry key="S10" value="0.003644974464628675" />
+      <entry key="S30" value="0.19020133232317907" />
+      <entry key="S60" value="0.5837914287334243" />
+      <entry key="M2" value="1.0643131703202866" />
+      <entry key="M5" value="1.6307284906596726" />
+      <entry key="M10" value="2.715915778412002" />
+      <entry key="M15" value="4.258885636739722" />
+      <entry key="M30" value="11.198532942352568" />
+      <entry key="H1" value="33.15257003083447" />
+      <entry key="H2" value="76.87001641174265" />
+      <entry key="H4" value="127.7256142389299" />
+      <entry key="D1" value="203.91829656254825" />
+      <entry key="W1" value="221.83826846224986" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.5138206686428815" />
-      <entry key="MS500" value="3.1586913738288716" />
-      <entry key="S2" value="4.9874892726746705" />
-      <entry key="S5" value="6.749938214556465" />
-      <entry key="S10" value="9.331787248437799" />
-      <entry key="S30" value="14.273305431891359" />
-      <entry key="S60" value="16.91673768995591" />
-      <entry key="M2" value="18.725160660391072" />
-      <entry key="M5" value="20.34507889860107" />
-      <entry key="M10" value="23.788935400447286" />
-      <entry key="M15" value="29.946103124241382" />
-      <entry key="M30" value="60.64499444681749" />
-      <entry key="H1" value="146.214047535348" />
-      <entry key="H2" value="297.10566932253545" />
-      <entry key="H4" value="462.2738559612941" />
-      <entry key="D1" value="701.05449014696" />
-      <entry key="W1" value="756.284139756397" />
+      <entry key="MS100" value="2.719792642279683E-7" />
+      <entry key="MS500" value="0.048630323534713665" />
+      <entry key="S2" value="0.46959859593002595" />
+      <entry key="S5" value="0.7390865151663861" />
+      <entry key="S10" value="0.8625593491827321" />
+      <entry key="S30" value="1.1590069441071524" />
+      <entry key="S60" value="1.778944447367843" />
+      <entry key="M2" value="3.5718265915228606" />
+      <entry key="M5" value="11.027682699741781" />
+      <entry key="M10" value="23.590799534098757" />
+      <entry key="M15" value="36.32230430617641" />
+      <entry key="M30" value="74.00750819421982" />
+      <entry key="H1" value="157.2335107678735" />
+      <entry key="H2" value="311.15010728406304" />
+      <entry key="H4" value="493.9333432464151" />
+      <entry key="D1" value="777.6603922588803" />
+      <entry key="W1" value="845.9050335365665" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -125,32 +129,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.InventoryManagementApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/LOQ/Desktop/Inventory_Management/backend/src/main/java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.jshint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.jshint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propCompiler",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.InventoryManagementApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/LOQ/Desktop/Inventory_Management/backend/src/main/java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.inventory_management.enum" />
