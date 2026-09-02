@@ -1,4 +1,6 @@
 package com.example.inventory_management.dto;
+
+import com.example.inventory_management.enums.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,8 +10,9 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class LoginResponse {
-    private String message;
-    private String token;
+public class RegisterRequest {
+    private String username;
+    private String email;
+    private String password;
+    private Role role;
 }
-
