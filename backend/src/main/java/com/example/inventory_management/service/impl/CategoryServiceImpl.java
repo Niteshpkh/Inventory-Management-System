@@ -1,11 +1,10 @@
-package com.example.inventory_management.service.impl;
+package com.example.inventory_management.service;
 
 import com.example.inventory_management.dto.CategoryRequest;
 import com.example.inventory_management.dto.CategoryResponse;
 import com.example.inventory_management.entity.Category;
 import com.example.inventory_management.exception.ResourceNotFoundException;
 import com.example.inventory_management.repository.CategoryRepository;
-import com.example.inventory_management.service.CategoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
