@@ -1,20 +1,7 @@
 package com.example.inventory_management.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
-import jakarta.persistence.UniqueConstraint;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
@@ -23,10 +10,7 @@ import java.time.LocalDateTime;
 @Table(
         name = "inventories",
         uniqueConstraints = {
-                @UniqueConstraint(
-                        name = "uk_inventory_product_warehouse",
-                        columnNames = {"product_id", "warehouse_id"}
-                )
+                @UniqueConstraint(name = "uk_product_warehouse", columnNames = {"product_id", "warehouse_id"})
         }
 )
 @Getter
@@ -46,10 +30,10 @@ public class Inventory {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "warehouse_id", nullable = false)
-    private WareHouse wareHouse;
+    private WareHouse warehouse; // Matches your WareHouse class name
 
-    @Column(nullable = false)
     @Builder.Default
+    @Column(nullable = false)
     private Integer quantity = 0;
 
     @UpdateTimestamp
