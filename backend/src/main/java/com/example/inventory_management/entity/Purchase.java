@@ -1,21 +1,8 @@
 package com.example.inventory_management.entity;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.example.inventory_management.enums.PurchaseStatus;
+import jakarta.persistence.*;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.math.BigDecimal;
@@ -36,8 +23,8 @@ public class Purchase {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true, length = 50)
-    private String purchaseNumber;
+    @Column(name = "reference_number", nullable = false, unique = true, length = 50)
+    private String referenceNumber;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "supplier_id", nullable = false)
@@ -47,16 +34,28 @@ public class Purchase {
     @JoinColumn(name = "warehouse_id", nullable = false)
     private WareHouse warehouse;
 
-    @CreationTimestamp
-    private LocalDateTime purchaseDate;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 20)
+    @Builder.Default
+    private PurchaseStatus status = PurchaseStatus.PENDING;
 
-    @Column(nullable = false, precision = 12, scale = 2)
+    @Column(name = "total_amount", nullable = false, precision = 14, scale = 2)
     private BigDecimal totalAmount;
 
-    @Column(nullable = false, length = 30)
-    private String status; // PENDING, RECEIVED, CANCELLED
+    @CreationTimestamp
+    @Column(name = "purchase_date", nullable = false, updatable = false)
+    private LocalDateTime purchaseDate;
 
     @Builder.Default
     @OneToMany(mappedBy = "purchase", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<PurchaseItem> items = new ArrayList<>();
+
+    // Required helper method for bidirectional relationship
+    public void addItem(PurchaseItem item) {
+        if (items == null) {
+            items = new ArrayList<>();
+        }
+        items.add(item);
+        item.setPurchase(this);
+    }
 }
