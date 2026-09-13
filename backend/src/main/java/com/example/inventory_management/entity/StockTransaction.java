@@ -1,22 +1,8 @@
 package com.example.inventory_management.entity;
 
 import com.example.inventory_management.enums.TransactionType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
@@ -42,20 +28,23 @@ public class StockTransaction {
     @JoinColumn(name = "warehouse_id", nullable = false)
     private WareHouse warehouse;
 
-    @Column(nullable = false)
-    private Integer quantity;
-
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false, length = 30)
-    private TransactionType transactionType; // PURCHASE, SALE, ADJUSTMENT, TRANSFER
+    @Column(name = "transaction_type", nullable = false, length = 30)
+    private TransactionType transactionType;
 
-    @Column(length = 50)
-    private String referenceId; // e.g., "PUR-001" or "SALE-001"
+    @Column(nullable = false)
+    private Integer quantity; // Always a positive magnitude (the type indicates direction)
+
+    @Column(name = "balance_after", nullable = false)
+    private Integer balanceAfter;
+
+    @Column(name = "reference_number", length = 100)
+    private String referenceNumber; // e.g., PO-2026-001, INV-1001, or ADJ-REASON
 
     @Column(length = 255)
-    private String reason;
+    private String note;
 
     @CreationTimestamp
-    @Column(nullable = false, updatable = false)
+    @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 }
