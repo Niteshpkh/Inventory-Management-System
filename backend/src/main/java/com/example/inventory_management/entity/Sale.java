@@ -1,21 +1,7 @@
 package com.example.inventory_management.entity;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.math.BigDecimal;
@@ -36,8 +22,8 @@ public class Sale {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true, length = 50)
-    private String saleNumber;
+    @Column(name = "invoice_number", nullable = false, unique = true, length = 50)
+    private String invoiceNumber;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "customer_id", nullable = false)
@@ -47,16 +33,28 @@ public class Sale {
     @JoinColumn(name = "warehouse_id", nullable = false)
     private WareHouse warehouse;
 
-    @CreationTimestamp
-    private LocalDateTime saleDate;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 20)
+    @Builder.Default
+    private SaleStatus status = SaleStatus.COMPLETED;
 
-    @Column(nullable = false, precision = 12, scale = 2)
+    @Column(name = "total_amount", nullable = false, precision = 14, scale = 2)
     private BigDecimal totalAmount;
 
-    @Column(nullable = false, length = 30)
-    private String status; // COMPLETED, PENDING, CANCELLED
+    @CreationTimestamp
+    @Column(name = "sale_date", nullable = false, updatable = false)
+    private LocalDateTime saleDate;
 
     @Builder.Default
     @OneToMany(mappedBy = "sale", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<SaleItem> items = new ArrayList<>();
+
+    // Keeps parent and child in sync for CascadeType.ALL
+    public void addItem(SaleItem item) {
+        if (items == null) {
+            items = new ArrayList<>();
+        }
+        items.add(item);
+        item.setSale(this);
+    }
 }
