@@ -1,5 +1,6 @@
 package com.example.inventory_management.entity;
 
+import com.example.inventory_management.enums.SaleStatus;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;

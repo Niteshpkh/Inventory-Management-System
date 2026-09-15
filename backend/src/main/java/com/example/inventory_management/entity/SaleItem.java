@@ -45,5 +45,5 @@ public class SaleItem {
     private BigDecimal unitPrice;
 
     @Column(nullable = false, precision = 12, scale = 2)
-    private BigDecimal totalPrice;
+    private BigDecimal subTotal;
 }
